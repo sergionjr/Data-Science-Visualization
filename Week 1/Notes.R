@@ -33,3 +33,19 @@ plot(a, cdf_values)
 # Smooth Density Plots
 
 # Normal Distributions (Bell Curve; Gaussian Distributions)
+
+# z = (x - average)/(Standard Deviation)
+
+library(tidyverse)
+library(dslabs)
+data(heights)
+
+index = heights$sex == "Male" #checking the data table HEIGHTS under the row SEX for all that == "Male"
+#heights ....full table
+#heights$sex ....'sex' column
+x = heights$height[index]
+heights$height[index]
+
+#calculating mean and standard deviation without builtin functions
+average = sum(x)/length(x)
+SD = sum((x - average)^2/length(x)) %>% sqrt()
