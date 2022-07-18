@@ -1,4 +1,5 @@
 library(dslabs)
+library(dplyr)
 
 data(murders)
 head(murders)
@@ -49,3 +50,6 @@ heights$height[index]
 #calculating mean and standard deviation without builtin functions
 average = sum(x)/length(x)
 SD = sum((x - average)^2/length(x)) %>% sqrt()
+
+average
+SD
